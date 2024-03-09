@@ -7,7 +7,7 @@ To read the given data and perform data cleaning and save the cleaned data to a 
 
 # Explanation
 
-Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect ,incompleted , irrelevant , duplicated or improperly formatted. Data cleaning is not simply about erasing data ,but rather finding a way to maximize datasets accuracy without necessarily deleting the information. An Outlier is a data item/object that deviates significantly from the rest of the (so-called normal) objects. Identifying outliers is important in statistics and data analysis because they can have a significant impact on the results of statistical analyses.
+Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect , incompleted , irrelevant , duplicated or improperly formatted. Data cleaning is not simply about erasing data , but rather finding a way to maximize datasets accuracy without necessarily deleting the information. An Outlier is a data item/object that deviates significantly from the rest of the (so-called normal) objects. Identifying outliers is important in statistics and data analysis because they can have a significant impact on the results of statistical analyses.
 
 # Algorithm
 STEP 1: Read the given Data
