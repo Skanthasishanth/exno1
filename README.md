@@ -1,11 +1,13 @@
 # Exno:1
-Data Cleaning Process
+
+Data Cleaning Process and Outliers Detection & Removal
 
 # AIM
 To read the given data and perform data cleaning and save the cleaned data to a file.
 
 # Explanation
-Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect ,incompleted , irrelevant , duplicated or improperly formatted. Data cleaning is not simply about erasing data ,but rather finding a way to maximize datasets accuracy without necessarily deleting the information.
+
+Data cleaning is the process of preparing data for analysis by removing or modifying data that is incorrect ,incompleted , irrelevant , duplicated or improperly formatted. Data cleaning is not simply about erasing data ,but rather finding a way to maximize datasets accuracy without necessarily deleting the information. An Outlier is a data item/object that deviates significantly from the rest of the (so-called normal) objects. Identifying outliers is important in statistics and data analysis because they can have a significant impact on the results of statistical analyses.
 
 # Algorithm
 STEP 1: Read the given Data
@@ -23,7 +25,7 @@ STEP 6: Use zscore of to remove outliers
 # 1) Read and display DataFrame
 ```
 import pandas as pd
-df=pd.read_csv('/content/SAMPLEDS.csv')
+df=pd.read_csv('/content/SAMPLEIDS.csv')
 df
 ```
 ## OUTPUT:
