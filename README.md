@@ -216,7 +216,7 @@ dff
 ![Op19-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/739e8ad5-7478-4fcd-84a6-96407bf41e0a)
 
 
-### Dropping the null value
+## Dropping the null value
 ```Python
 dff.dropna()
 ```
