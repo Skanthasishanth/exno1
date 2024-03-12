@@ -113,7 +113,7 @@ tot
 ![Op9-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/4ba28b9a-e63b-4929-bdd2-02e9f2dfb3f6)
 
 
-## FIll the Null values
+## Fill the Null values
 ```
 df.fillna(0)
 ```
