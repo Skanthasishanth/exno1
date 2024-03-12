@@ -22,7 +22,7 @@ STEP 5: Remove outliers using IQR
 
 STEP 6: Use zscore of to remove outliers
 
-# 1) Read and display DataFrame
+## Read and display DataFrame
 ```
 import pandas as pd
 df=pd.read_csv('/content/SAMPLEIDS.csv')
@@ -32,7 +32,7 @@ df
 
 ![Op1-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/54a175d9-f75c-46d4-aa34-9805f8756ed1)
 
-## 2) Display head
+## Display head
 ```
 df.head()
 ```
@@ -41,7 +41,7 @@ df.head()
 ![Op2-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/38ac9560-4fdc-41e8-803b-b54fc2f2d1e6)
 
 
-## 3) Display tail
+## Display tail
 ```
 df.tail()
 ```
@@ -50,7 +50,7 @@ df.tail()
 ![Op3-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/3f801907-b3d6-41a6-aab9-c8d6f4bd8f13)
 
 
-## 4) Info of dataframe
+## Info of dataframe
 ```
 df.info()
 ```
@@ -59,7 +59,7 @@ df.info()
 ![Op4-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/f61ec320-7527-432e-b9b5-79c8b4a7fb6d)
 
 
-## 5) Describe about the dataframe
+## Describe about the dataframe
 ```
 df.describe()
 ```
@@ -70,7 +70,7 @@ df.describe()
 
 
 
-## 6) Shape of the dataframe
+## Shape of the dataframe
 ```
 df.shape
 ```
@@ -81,7 +81,7 @@ df.shape
 
 
 
-## 7) Checking tha NUll values
+## Checking tha NUll values
 ```
 df.isnull().sum()
 ```
@@ -90,7 +90,7 @@ df.isnull().sum()
 ![Op7-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/99699853-0572-4272-bb88-1b40f503c48a)
 
 
-## 8) Drop the Null values
+## Drop the Null values
 ```
 x=df.dropna(how='any')
 x
@@ -102,7 +102,7 @@ x
 
 
 
-## 9) Drop the Null values in Total
+## Drop the Null values in Total
 ```
 tot=df.dropna(subset=['TOTAL'],how='any')
 tot
@@ -113,7 +113,7 @@ tot
 ![Op9-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/4ba28b9a-e63b-4929-bdd2-02e9f2dfb3f6)
 
 
-## 10) FIll the Null values
+## FIll the Null values
 ```
 df.fillna(0)
 ```
@@ -122,7 +122,7 @@ df.fillna(0)
 ![Op10-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/28e88a38-84f4-4a20-881a-c98ee5096570)
 
 
-## 11) Finding the mean value
+## Finding the mean value
 ```
 mn=df.TOTAL.mean()
 mn
@@ -132,7 +132,7 @@ mn
 ![Op11-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/38e149f1-5a01-45d8-b331-490f5e9da6d5)
 
 
-## 12) Final output
+## Final output
 ```
 for x in df.index:
   if df.loc[x,"AVG"]>100:
@@ -144,7 +144,7 @@ df
 ![Op12-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/e40e418b-b08e-43bf-a3c9-f758743e10c1)
 
 
-## 13) Outlier detection and removal
+## Outlier detection and removal
 ```Python
 import pandas as pd
 import seaborn as sns
@@ -157,7 +157,7 @@ dff
 ![Op13-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/e85ddba5-3ed0-46f6-bf22-34f76c627b83)
 
 
-## 14) Boxplot
+## Boxplot
 ```Python
 dsf=sns.boxplot(dff)
 ```
@@ -167,7 +167,7 @@ dsf=sns.boxplot(dff)
 ![Op14-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/3899895b-e337-4b4d-86eb-e81e1102b475)
 
 
-## 15) Scatterplot
+## Scatterplot
 ```Python
 dsf=sns.scatterplot(dff)
 ```
@@ -177,7 +177,7 @@ dsf=sns.scatterplot(dff)
 
 
 
-## 16) IQR
+## IQR
 ```Python
 q1=dff.quantile(0.25)
 q2=dff.quantile(0.5)
@@ -190,7 +190,7 @@ iqr
 ![Op16-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/b495843e-d90a-42a0-b88d-385cc2744db0)
 
 
-## 17) Checking the high and low value
+## Checking the high and low value
 ```Python
 low=q1-1.5*iqr
 low
@@ -206,7 +206,7 @@ high
 ![Op18-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/ba8dae3c-e928-4df6-86ee-d54c221c91b5)
 
 
-## 18) Filtering outlier value
+## Filtering outlier value
 ```Python
 dff=dff[((dff>=low)&(dff<=high))]
 dff
@@ -216,7 +216,7 @@ dff
 ![Op19-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/739e8ad5-7478-4fcd-84a6-96407bf41e0a)
 
 
-### 19) Dropping the null value
+### Dropping the null value
 ```Python
 dff.dropna()
 ```
@@ -225,7 +225,7 @@ dff.dropna()
 ![Op20-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/8e6a8403-9f81-4ca4-ab60-75be02ba9aa8)
 
 
-## 20) Box plotting after filtering outlier
+## Box plotting after filtering outlier
 ```Python
 sns.boxplot(data=dff)
 ```
@@ -234,7 +234,8 @@ sns.boxplot(data=dff)
 ![Op21-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/5dc91e13-d598-46f0-94c8-3323940cfb41)
 
 
-## 21) Z Score
+## Z Score
+
 ```Python
 import pandas as pd
 import seaborn as sns
@@ -250,7 +251,6 @@ ds
 ![Op22-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/6269ca2a-f469-4614-a261-69c0e8a8f0be)
 
 
-## 22) Z Score
 ```Python
 import pandas as pd
 import seaborn as sns
@@ -266,7 +266,6 @@ ds
 ![Op23-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/7d6d2ee0-9e0c-4ef4-bca4-b00af7d18f5f)
 
 
-## 23) Z Score
 ```Python
 sns.boxplot(data=ds)
 ```
@@ -275,8 +274,6 @@ sns.boxplot(data=ds)
 ![Op24-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/b1e47e13-7a81-4c3d-b638-58caf6431d1b)
 
 
-
-## 24) Z Score
 ```Python
 z=np.abs(stats.zscore(ds))
 z
@@ -286,7 +283,6 @@ z
 ![Op25-ds1](https://github.com/Skanthasishanth/exno1/assets/118298456/b9fcd57a-d8fa-4b7d-8e39-0b75b913ac42)
 
 
-## 25) Z score 
 ```Python
 print(ds[z['weight']>3])
 ```
